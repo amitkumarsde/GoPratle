@@ -255,8 +255,9 @@ Main rules:
 - Create a new **Web Service** on Render and connect your GitHub repo
 - Fill in these settings:
   - **Root Directory:** `backend`
-  - **Build Command:** `npm install && npm run build`
+  - **Build Command:** `npm install --include=dev && npm run build`
   - **Start Command:** `npm start`
+- `--include=dev` is needed because Render installs in production mode, which skips TypeScript and the `@types` packages used by the build
 - Add environment variable:
   - `MONGODB_URI` = your MongoDB Atlas connection string
 - In MongoDB Atlas, go to **Network Access** and allow `0.0.0.0/0` so Render can connect
