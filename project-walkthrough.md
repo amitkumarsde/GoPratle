@@ -180,3 +180,5 @@ A short note to understand and revise the project. Easy words, one idea per poin
 - Validation: frontend + backend + database
 - MVC on both sides
 - Hosting: Vercel (frontend) + Render (backend) + MongoDB Atlas (database)
+
+---
