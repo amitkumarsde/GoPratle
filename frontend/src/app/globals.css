@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* Colors taken from the GoPratle logo: orange primary, light orange secondary, near-black text */
+@theme {
+  --color-brand: #ff4c18;
+  --color-brand-dark: #e03e0e;
+  --color-brand-light: #fff1eb;
+  --color-brand-light-hover: #ffe2d6;
+  --color-ink: #2e2e2e;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--color-ink);
+}
+
+/* Page scrollbar in theme colors: orange thumb on a light orange track (Chrome, Edge, Firefox) */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brand) var(--color-brand-light);
+}
+
+/* Same scrollbar for Safari */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brand-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand);
+  border-radius: 9999px;
+  border: 1px solid var(--color-brand-light);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-dark);
+}
